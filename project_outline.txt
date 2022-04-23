@@ -1,0 +1,25 @@
+techs:
+VSCode
+Git
+Github
+Node
+Express
+MongoDB
+Board Game Geek API: https://boardgamegeek.com/wiki/page/BGG_XML_API2
+
+
+site overview:
+Simple board game convention website -
+ The convention has rooms, rooms contain tables, each table can host 1 game
+ The convention runs 3 days, from 8AM - 8PM, 12 hours per day
+ A board game has a duration, number of players.
+
+ Hosts will submit an offer to host a game, specifying a duration and number of players
+ Moderators will assign the game to a table
+ Guests will reserve a player postion at an approved game
+
+
+3 user types: 
+	moderator: approves offers from host for running a game at convention
+	host: offers to host a game at the convention
+	guest: reserves a player spot at a game
