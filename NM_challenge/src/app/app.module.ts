@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StaticPageComponent } from './static-page/static-page.component';
 import { RouterModule } from '@angular/router';
+import { TestFilteringComponent } from './test-filtering/test-filtering.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    StaticPageComponent
+    StaticPageComponent,
+    TestFilteringComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path: 'static-page', component: StaticPageComponent}
+      {path: 'static-page', component: StaticPageComponent},
+      {path: 'test-filtering', component: TestFilteringComponent}
     ])
   ],
   providers: [],
