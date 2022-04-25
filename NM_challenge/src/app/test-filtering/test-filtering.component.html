@@ -1,1 +1,17 @@
-<p>test-filtering works!</p>
+<html>
+<body>
+    <input type="number" value=1  #room_num/>
+    {{room_num.value}}
+    <ul>
+        <li *ngFor="let table of TableList | roomFilter:room_num.value">
+            <span>
+                Room: {{table.Room}}
+                <br>
+                Table Number: {{table.TableNumber}}
+                <br>
+                Seats: {{table.NumberOfSeats}}
+            </span>
+        </li>
+    </ul>
+</body>
+</html>

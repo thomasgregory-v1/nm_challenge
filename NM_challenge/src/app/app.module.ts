@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StaticPageComponent } from './static-page/static-page.component';
 import { RouterModule } from '@angular/router';
-import { TestFilteringComponent } from './test-filtering/test-filtering.component';
+import { RoomFilterPipe, TestFilteringComponent } from './test-filtering/test-filtering.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     StaticPageComponent,
-    TestFilteringComponent
+    TestFilteringComponent,
+    RoomFilterPipe,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot([
       {path: 'static-page', component: StaticPageComponent},
       {path: 'test-filtering', component: TestFilteringComponent}
