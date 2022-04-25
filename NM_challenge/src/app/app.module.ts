@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { RoomFilterPipe, TestFilteringComponent } from './test-filtering/test-filtering.component';
 import { FilteredApiResultsComponent } from './filtered-api-results/filtered-api-results.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MessagesComponent } from './messages/messages.component';
 
 
 
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     TestFilteringComponent,
     RoomFilterPipe,
     FilteredApiResultsComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,

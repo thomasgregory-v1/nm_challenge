@@ -1,1 +1,6 @@
 <p>filtered-api-results works!</p>
+<p *ngFor='let table of apiData'>
+    Table #{{table['TableNumber']}} in  
+    room {{table['Room']}} has 
+    {{table['NumberOfSeats']}} seats
+</p>
