@@ -19,7 +19,7 @@ import { RoomFilterPipe, TestFilteringComponent } from './test-filtering/test-fi
   imports: [
     BrowserModule,
     FormsModule,
-    //FormControl,
+    AppRoutingModule,
     RouterModule.forRoot([
       {path: 'static-page', component: StaticPageComponent},
       {path: 'test-filtering', component: TestFilteringComponent}
