@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { StaticPageComponent } from './static-page/static-page.component';
 import { RouterModule } from '@angular/router';
 import { RoomFilterPipe, TestFilteringComponent } from './test-filtering/test-filtering.component';
+import { FilteredApiResultsComponent } from './filtered-api-results/filtered-api-results.component';
 
 
 
@@ -15,6 +16,7 @@ import { RoomFilterPipe, TestFilteringComponent } from './test-filtering/test-fi
     StaticPageComponent,
     TestFilteringComponent,
     RoomFilterPipe,
+    FilteredApiResultsComponent,
   ],
   imports: [
     BrowserModule,
