@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormControl } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StaticPageComponent } from './static-page/static-page.component';
@@ -19,6 +19,7 @@ import { RoomFilterPipe, TestFilteringComponent } from './test-filtering/test-fi
   imports: [
     BrowserModule,
     FormsModule,
+    //FormControl,
     RouterModule.forRoot([
       {path: 'static-page', component: StaticPageComponent},
       {path: 'test-filtering', component: TestFilteringComponent}

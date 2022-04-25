@@ -1,7 +1,8 @@
-import {Pipe, PipeTransform} from '@angular/core';
+import {ElementRef, Pipe, PipeTransform, ViewChild} from '@angular/core';
 import { Component, OnInit, Input } from '@angular/core';
 import { GameTable } from '../Interface_Table'
-import { FormsModule } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-test-filtering',
@@ -10,7 +11,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class TestFilteringComponent implements OnInit {
 
-  @Input() testinput?: Number
+  @ViewChild('room_num', {static: true}) room_numElement: ElementRef;
+  room_num_val: string = '1'
 
   TableList : GameTable[] =[
     {Room : 1, TableNumber : 1, NumberOfSeats : 8},
@@ -21,18 +23,22 @@ export class TestFilteringComponent implements OnInit {
     {Room : 2, TableNumber : 3, NumberOfSeats : 4},
     {Room : 3, TableNumber : 1, NumberOfSeats : 2}
   ]
+ 
 
-
-  constructor() {  }
+  constructor(room_numElement: ElementRef) { 
+    this.room_numElement=room_numElement;
+   }
 
   ngOnInit(): void{ }
 
+  changeRoom() {
+    this.room_num_val = this.room_numElement.nativeElement.value;
+  }
 }
 
 @Pipe({name:'roomFilter'})
 export class RoomFilterPipe implements PipeTransform {
-  transform(value: GameTable[], roomNumber:string) {
-     
+  transform(value: GameTable[], roomNumber:string) {     
     return value.filter(val=>val.Room == parseInt(roomNumber))
   }      
 }
