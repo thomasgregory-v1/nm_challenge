@@ -12,7 +12,7 @@ import { GameTable } from '../Interface_Table'
 export class TestFilteringComponent implements OnInit {
 
   @ViewChild('room_num', {static: true}) room_numElement: ElementRef;
-  room_num_val: string = '1'
+  room_num_val: string = ''
 
   TableList : GameTable[] =[
     {Room : 1, TableNumber : 1, NumberOfSeats : 8},
@@ -31,14 +31,14 @@ export class TestFilteringComponent implements OnInit {
 
   ngOnInit(): void{ }
 
-  changeRoom() {
-    this.room_num_val = this.room_numElement.nativeElement.value;
-  }
 }
 
 @Pipe({name:'roomFilter'})
 export class RoomFilterPipe implements PipeTransform {
   transform(value: GameTable[], roomNumber:string) {     
+    if(isNaN(parseInt(roomNumber))){
+      return value
+    }
     return value.filter(val=>val.Room == parseInt(roomNumber))
   }      
 }

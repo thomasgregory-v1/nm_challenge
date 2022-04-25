@@ -1,6 +1,6 @@
 
 <body>
-    <input type="text" id="room_num" name="room_num" [(ngModel)]="room_num_val" #room_num/>
+    <input type="text" id="room_num" name="room_num" [(ngModel)]="room_num_val" />
     <br>{{room_num_val}}
     <ul>
         <li *ngFor="let table of TableList | roomFilter:room_num_val">
